@@ -1,0 +1,54 @@
+<ul class="nav">
+  <h1 class="ibscTitle"><a href="/ibsc">ISBC</a></h1>
+  <li><a class="active" href="/ibsc">Main page</a></li>
+  <li><a href="#catagories">Catagories</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="grid">
+  <div class="title">
+    <h1>Welcome Candidates!</h1>
+    <h2>This is the portion of the website where all the job listings are rendered.</h2>
+  </div>
+  <div class="subscribe">
+      <div> Get new <button name="button" type="button" class="btn btn-primary btn-sm dropdown-toggle" role="button" id="dropdownUserJobListings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">dropdownlist</button> listings sent to <input placeholder="you@youremail.com" type="email"> every day! <input type="submit" name="subscribe" value="Subscribe" class="inline btn btn-sm btn-success"></div>
+  </div>
+
+
+  <div class="container">
+       <div class="mail-box">
+            <aside class="lg-side">
+                <div class="inbox-head">
+                  <div class="form-group">
+                    <button (click)="createJob()" style="display: inline; margin-bottom: 8px;"  class="btn btn-primary btn-sm" role="button">Create Job</button>
+                    <hr>
+                    <p>Filter jobs via keyword</p>
+                    <input style="display: inline" type="text" class="form-control" placeholder="Filter" style="width: 200px;" [(ngModel)]="searchTerm">
+                  </div>
+                    <table class="table table-inbox-title">
+                        <tbody>
+                          <tr >
+                              <td class="company"> Company </td>
+                              <td class="jobtitle"> Job Title </td>
+                              <td style="float: right;" class="pull right date"> Date Posted </td>
+                          </tr>
+                      </tbody>
+                      </table>
+                    <table class="table table-inbox table-hover">
+                      <tbody>
+                        <tr class="unread" *ngFor="let job of jobs | jobFilter : searchTerm">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="view-message  dont-show">{{job.company_name | async}}</td>
+                            <td class="view-message "><a href="#">{{job.job_title | async | words:10}}</a></td>
+                            <td class="view-message  text-right">{{job.created_at | async}}</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </aside>
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div style="text-align:center">
+<body>
+  <div class="background">
+    <div class="ibsclogo">
+      <a class="ibsc" href="/about"><img class="ibsc" src="../assets/ibsc-logo.png" alt="logo"></a>
+    </div>
+    <div *ngIf="!hovercandidate && !hoverclient" id="fade" class="split client">
+      <button (click)="goToClients()" (mouseenter)="mouseHoveringClient()" (mouseleave)="mouseLeavingClient()" class="btn showbutton">Client</button>
+    </div>
+    <div *ngIf="!hovercandidate && !hoverclient" id="fade" class="split candidate">
+      <button (click)="goToCandidates()" (mouseenter)="mouseHoveringCandidate()" (mouseleave)="mouseLeavingCandidate()" class="btn showbutton">Candidate</button>
+    </div>
+    <div *ngIf="hoverclient == true" id="fadeblur" class="split client">
+      <button (click)="goToClients()" (mouseenter)="mouseHoveringClient()" (mouseleave)="mouseLeavingClient()" class="btnblur showbutton">Client</button>
+    </div>
+    <div *ngIf="hovercandidate == true" id="fadeblur" class="split candidate">
+      <button (click)="goToCandidates()" (mouseenter)="mouseHoveringCandidate()" (mouseleave)="mouseLeavingCandidate()" class="btnblur showbutton">Candidate</button>
+    </div>
+    <div *ngIf="hovercandidate == true" id="fadeblur" class="split client">
+      <button (click)="goToClients()" (mouseenter)="mouseHoveringClient()" (mouseleave)="mouseLeavingClient()" class="btnexit showbutton">Client</button>
+    </div>
+    <div *ngIf="hoverclient == true" id="fadeblur" class="split candidate">
+      <button (click)="goToCandidates()" (mouseenter)="mouseHoveringCandidate()" (mouseleave)="mouseLeavingCandidate()" class="btnexit showbutton">Candidate</button>
+    </div>
+  </div>
+</body>
+</div>
+
+

@@ -1,0 +1,195 @@
+
+
+.background {
+  position: fixed;
+  background-image: url(../../assets/towerbridge1.jpg);
+  transform: translateY(-100);
+  left: 0%;
+  right: 0%;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  z-index: 1;
+
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+
+.client {
+  left: 0;
+
+}
+
+.candidate {
+  right: 0;
+
+}
+
+#fade {
+  background: rgb(100, 180, 246, 0);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.8s;
+  z-index: 1;
+  position: absolute;
+}
+
+#fade:hover {
+  z-index: 1;
+  transition: 1s;
+  transition-delay: 0.3s;
+  background: rgb(100, 180, 246, 0.1);
+}
+
+
+#fadeblur {
+  background: rgb(100, 180, 246, 0);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.8s;
+  position: absolute;
+  z-index: 9999;
+}
+
+#fadeblur:hover {
+z-index: 1;
+transition: 0.5s;
+background: rgb(100, 180, 246, 0.00);
+}
+
+
+
+.ibsclogo {
+  margin-left: auto;
+  margin-right: auto;
+  top: 10%;
+  display: block;
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+
+
+a img.ibsc {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 73px;
+  opacity: 1;
+  z-index: 9999;
+  transition: 0.8s;
+  transition-delay:0.1s;
+  transform: scale(1);
+
+}
+
+a img.ibsc:hover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.2);
+  z-index: 9999;
+  position: relative;
+  opacity: 1;
+  transition: .8s;
+  transition-delay:0.1s;
+
+}
+
+.btnblur {
+  position: relative;
+  top:40%;
+  left:0%;
+  width: 224px;
+  height: 80px;
+  background: rgb(100, 180, 246, 0);
+  border: none;
+  color: white;
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 32px;
+  margin: 4px 2px;
+  transition: 0.2s;
+  border-radius: 0%;
+  z-index: 9999;
+}
+
+.btnexit {
+  position: relative;
+  top:40%;
+  left:0%;
+  background: rgb(100, 180, 246, 0);
+  border: none;
+  color: white;
+  padding: 16px 24px;
+  width: 224px;
+  height: 80px;
+  text-align: center;
+  font-size: 32px;
+  margin: 4px 2px;
+  transition-delay: 0.2s;
+  transition: .2s;
+  transform: scale(0);
+  border-radius: 0%;
+  z-index: 9999;
+  scale: 0;
+}
+
+.btnblur:hover {
+  color: white;
+  top:40%;
+  width: 224px;
+  height: 80px;
+  left:0%;
+  background: rgb(100, 180, 246, 1);
+  cursor: pointer;
+  transition: 0.2s;
+  transform: scale(1.24);
+  position: relative;
+}
+
+
+.btn {
+  position: relative;
+  top:40%;
+  left:0%;
+  width: 224px;
+  height: 80px;
+  text-align: center;
+  background: rgb(100, 180, 246, .6);
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 32px;
+  margin: 4px 2px;
+  transition: 0.2s;
+  border-radius: 0%;
+  z-index: 9999;
+}
+
+
+
+@media screen and (min-width:768px)
+{
+
+}
